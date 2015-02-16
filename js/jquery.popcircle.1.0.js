@@ -172,7 +172,6 @@
         }, 170);
 
       } else {
-        console.log('sdsd');
         $('#iconClose').css('display', 'block');
         openMenu(self);
       }
