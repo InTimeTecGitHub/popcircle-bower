@@ -150,13 +150,17 @@
       self = $(this);
       openMenu(self);
       $('#iconClose').css('display', 'block');
+      $('#iconClose1').css('display', 'block');
     });
 
     this.off('WCircleMenuClose').on('WCircleMenuClose', function () {
       self = $(this);
       closeMenu(self);
       setTimeout(function () {
-        $('#iconClose').css('display', 'none')
+        $('#iconClose').css('display', 'block')
+      }, 170);
+      setTimeout(function () {
+        $('#iconClose1').css('display', 'block')
       }, 170);
     });
 
@@ -170,9 +174,13 @@
         setTimeout(function () {
           $('#iconClose').css('display', 'none')
         }, 170);
+        setTimeout(function () {
+          $('#iconClose1').css('display', 'none')
+        }, 170);
 
       } else {
         $('#iconClose').css('display', 'block');
+        $('#iconClose1').css('display', 'block');
         openMenu(self);
       }
     });
