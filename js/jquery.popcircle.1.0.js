@@ -157,10 +157,7 @@
       self = $(this);
       closeMenu(self);
       setTimeout(function () {
-        $('#iconClose').css('display', 'block')
-      }, 170);
-      setTimeout(function () {
-        $('#iconClose1').css('display', 'block')
+        $('#iconClose, #iconClose1').css('display', 'block')
       }, 170);
     });
 
@@ -172,12 +169,12 @@
       if (icon_wrapper.is(':visible')) {
         closeMenu(self);
         setTimeout(function () {
-          $('#iconClose').css('display', 'none')
+          $('#iconClose, #iconClose1').css('display', 'none');
+          $('div.wcircle-icon').css({
+            'height': '0px',
+            'width': '0px'
+          });
         }, 170);
-        setTimeout(function () {
-          $('#iconClose1').css('display', 'none')
-        }, 170);
-
       } else {
         $('#iconClose').css('display', 'block');
         $('#iconClose1').css('display', 'block');
