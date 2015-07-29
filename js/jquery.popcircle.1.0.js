@@ -144,6 +144,7 @@
           }, opts.delay * (target.length - (increment + 1)));
         })(i);
       }
+	  $('canvas').css('opacity', 1);
     };
 
     this.off('WCircleMenuOpen').on('WCircleMenuOpen', function () {
